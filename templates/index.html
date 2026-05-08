@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Training Trains AI Chatbot
+    </title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static',
+    filename='style.css') }}">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+
+        <div class="header">
+
+            <h2>
+                🤖 Training Trains AI Assistant
+            </h2>
+
+            <p>
+                Internship Support System
+            </p>
+
+        </div>
+
+        <!-- CHAT BOX -->
+
+        <div class="chat-box"
+        id="chatBox">
+
+            <div class="bot-message">
+
+                👋 Welcome to Training Trains!
+
+                <br><br>
+
+                Ask about:
+                <br>
+
+                ✅ Internship
+                <br>
+
+                ✅ Domains
+                <br>
+
+                ✅ Certificate
+                <br>
+
+                ✅ Contact
+
+            </div>
+
+        </div>
+
+        <!-- QUICK BUTTONS -->
+
+        <div class="quick-buttons">
+
+            <button onclick="quickMessage('about')">
+                About
+            </button>
+
+            <button onclick="quickMessage('domains')">
+                Domains
+            </button>
+
+            <button onclick="quickMessage('duration')">
+                Duration
+            </button>
+
+            <button onclick="quickMessage('certificate')">
+                Certificate
+            </button>
+
+            <button onclick="quickMessage('contact')">
+                Contact
+            </button>
+
+        </div>
+
+        <!-- INPUT AREA -->
+
+        <div class="input-area">
+
+            <input type="text"
+            id="userInput"
+            placeholder="Type your message...">
+
+            <button onclick="sendMessage()">
+                Send
+            </button>
+
+            <button onclick="startVoice()">
+                🎤
+            </button>
+
+        </div>
+
+        <!-- INTERNSHIP FORM -->
+
+        <div class="internship-form">
+
+            <h3>
+                🚀 Apply Internship
+            </h3>
+
+            <input type="text"
+            placeholder="Name">
+
+            <input type="text"
+            placeholder="Register Number">
+
+            <input type="email"
+            placeholder="Email">
+
+            <input type="text"
+            placeholder="Phone Number">
+
+            <input type="text"
+            placeholder="College Name">
+	    
+	    <input type="text"
+	    placeholder="Company Name (Optional)">
+
+	    <select>
+
+   		 <option>
+       			 Select Company
+   	         </option>
+
+    		 <option>
+       			 Training Trains
+   		 </option>
+
+   		 <option>
+      			  TCS
+    		</option>
+
+   		 <option>
+       			 Infosys
+    		</option>
+
+    		<option>
+       			 Wipro
+    		</option>
+
+</select>
+
+            <input type="text"
+            placeholder="Department / Course">
+
+            <select>
+
+                <option>
+                    Select Internship Domain
+                </option>
+
+                <option>
+                    Web Development
+                </option>
+
+                <option>
+                    AI & ML
+                </option>
+
+                <option>
+                    Cybersecurity
+                </option>
+
+            </select>
+
+            <!-- ✅ FIX ADDED -->
+            <button id="applyBtn">
+                Apply Internship
+            </button>
+	
+
+        </div>
+
+        <!-- CERTIFICATE -->
+
+        <div class="certificate-section">
+
+            <h3>
+                🎓 Certificate Generator
+            </h3>
+
+            <input type="text"
+            placeholder="Student Name">
+
+            <!-- ✅ FIX ADDED -->
+            <button id="certBtn">
+                Generate Certificate
+            </button>
+
+        </div>
+
+    </div>
+
+    <script src="{{ url_for('static',
+    filename='script.js') }}"></script>
+
+</body>
+</html>
